@@ -1,5 +1,21 @@
 import { useState } from 'react'
-
+const NameList =()=>{
+  const [list,setList] = useState(["aka","were","ferat"]);
+  const [name,setName] = useState("")
+  const addName =()=>
+  {
+    setList([...list,name])
+  }
+  return(
+    <>
+    <input type ="text" value={name} onChange={(e)=>setName(e.target.value)}></input>
+    <ul>
+      {list.map((item,key)=><li key = {key}>{item}</li>)}
+    </ul>
+    <button onClick={addName}>add</button>
+    </>
+  )
+}
 function Counter () {
 const [count,setCount] = useState(10)
 const addOne = () =>{
@@ -17,11 +33,8 @@ const addOne = () =>{
 const App =()=>{
  return(
 <>
-  <h1>her1</h1>
   <Counter/>
-  <Counter/>
-  <Counter/>
-  <Counter/>
+<NameList/> 
   </>
  ) 
   
