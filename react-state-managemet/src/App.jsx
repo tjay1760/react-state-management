@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function App() {
+function Counter () {
 const [count,setCount] = useState(10)
 const addOne = () =>{
   setCount((count)=>count+1)
@@ -14,5 +14,16 @@ const addOne = () =>{
     </>
   )
 }
-
+const App =()=>{
+ return(
+<>
+  <h1>her1</h1>
+  <Counter/>
+  <Counter/>
+  <Counter/>
+  <Counter/>
+  </>
+ ) 
+  
+}
 export default App
